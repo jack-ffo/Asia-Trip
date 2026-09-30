@@ -8,11 +8,11 @@
 <meta property="og:title" content="Three Weeks East — Thailand, Vietnam &amp; Japan">
 <meta property="og:description" content="May 26 – June 17, 2027. Scroll the route: Bangkok, Chiang Mai, Hanoi, Cao Bang, Lan Ha Bay, Tokyo, Kyoto, Osaka.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f3ecdd">
+<meta name="theme-color" content="#fff4d6">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f3ecdd'/%3E%3Cpath d='M6 22c5-9 12-13 20-12' fill='none' stroke='%23c0392b' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='6' cy='22' r='3' fill='%231d2733'/%3E%3Ccircle cx='26' cy='10' r='3' fill='%231d2733'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-country="none">
@@ -234,11 +234,19 @@
 
       <div class="map-caption" id="mapCaption"><b>The route</b> New York · Thailand · Vietnam · Japan</div>
       <svg class="compass" viewBox="-20 -24 40 48" aria-hidden="true">
-        <circle r="13" class="c-ring"/>
-        <path d="M0-17 3.2 0 0 17-3.2 0z" class="c-needle"/>
-        <path d="M0-17 3.2 0h-6.4z" class="c-north"/>
+        <rect x="-12" y="-12" width="24" height="24" class="c-ring"/>
+        <path d="M-2-18h4v18h-4z" class="c-north"/>
+        <path d="M-2 0h4v18h-4z" class="c-needle"/>
         <text y="-19" text-anchor="middle">N</text>
       </svg>
+
+      <figure class="scene" aria-live="polite">
+        <div class="scene__screen"><canvas id="scene" width="160" height="100" role="img" aria-label="Pixel art of four stick-figure friends at the current stop"></canvas></div>
+        <figcaption class="scene__cap">
+          <span class="scene__where" id="sceneWhere">New York</span>
+          <span class="scene__what" id="sceneCap">The crew, packed and ready</span>
+        </figcaption>
+      </figure>
     </div>
   </aside>
 
@@ -253,6 +261,15 @@
           <div><dt>Length</dt><dd>23 days</dd></div>
           <div><dt>Moving parts</dt><dd>5 flights · 2 trains · 3 road trips · 1 boat</dd></div>
         </dl>
+        <div class="crew-intro">
+          <p class="crew-intro__label">The crew</p>
+          <ul class="crew-list">
+            <li style="--c:#ff4fa3"><i></i>Pink <small>cap</small></li>
+            <li style="--c:#1fa2ff"><i></i>Blue <small>ponytail</small></li>
+            <li style="--c:#ffc619"><i></i>Sunny <small>glasses</small></li>
+            <li style="--c:#a45cff"><i></i>Violet <small>backpack</small></li>
+          </ul>
+        </div>
         <ul class="legend" aria-label="Country colors">
           <li class="c-th"><i></i>Thailand</li>
           <li class="c-vn"><i></i>Vietnam</li>
@@ -280,7 +297,7 @@
           <li><span>Kyoto</span><em>2 nights</em></li>
           <li><span>Osaka</span><em>1 night</em></li>
         </ol>
-        <p class="colophon">Map drawn from Natural Earth public-domain data. No map tiles were harmed.</p>
+        <p class="colophon">Map drawn from Natural Earth public-domain data. Every pixel of the crew is drawn in code, one rectangle at a time.</p>
       </div>
     </footer>
   </main>
